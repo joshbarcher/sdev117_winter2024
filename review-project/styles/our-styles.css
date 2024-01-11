@@ -1,0 +1,96 @@
+html {
+    background-color: beige;
+}
+
+body {
+    /* fixed layout */
+    width: 1200px;
+    margin: auto;
+
+    color: beige;
+    background-color: rgb(192, 119, 119);
+    border: 2px solid rgb(98, 61, 61);
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "pt pt pt pt"
+        "el el pa pa"
+        "td .  .  mt"
+        "ip ip ip ip"
+        "tb tb fr fr";
+}
+
+/* name all major sections on the page */
+#page-title { grid-area: pt; }
+#elements { grid-area: el; }
+#path { grid-area: pa; }
+#todo { grid-area: td; }
+#more-todo { grid-area: mt; }
+#image-panel { grid-area: ip; }
+#tables { grid-area: tb; }
+#forms { grid-area: fr; }
+
+section {
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    border: 2px dashed black;
+    margin: 20px;
+}
+
+.information {
+    background-color: rgb(74, 50, 19);
+}
+
+.data {
+    background-color: beige;
+    color: black;
+}
+
+#elements, #page-title {
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightgreen;
+}
+
+/* target h2 elements direct child of a section */
+section > h2 {
+    text-decoration: underline;
+}
+
+/* turn this into a flex-box */
+#image-panel {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    /* aligning elements */
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#image-panel img {
+    border: 2px solid rgb(60, 5, 19);
+    height: 180px;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+#page-title {
+    text-align: center;
+    color: beige;
+}
+
+#page-title h1 {
+    font-size: 3em;
+    background: linear-gradient(
+        100deg, 
+        rgb(77, 44, 18),
+        rgb(238, 211, 153), 
+        rgb(72, 17, 40)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
