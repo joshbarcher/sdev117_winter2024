@@ -4,10 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Math Calculator</title>
+
+        <!-- first reset all browser defaults (especially spacing) -->
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Look at the console!</h1>
+        <h1>Enjoy My Math Calculator</h1>
+        
+        <section>
+            <label>First Number: </label>
+            <input type="text" id="num1">
+        </section>
 
-        <script src="math.js"></script>
+        <section>
+            <label>Second Number: </label>
+            <input type="text" id="num2">
+        </section>
+
+        <section>
+            <button id="calc-button">Calculate!</button>
+            <textarea id="output"></textarea>
+        </section>
+
+        <script src="cooler-math.js"></script>
     </body>
 </html>

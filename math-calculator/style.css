@@ -1,0 +1,26 @@
+h1 {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+label, button {
+    display: inline-block; /* this is a mix of inline and block */
+    width: 150px;
+    margin: 10px;
+}
+
+input, textarea {
+    margin: 10px;
+    width: 350px;
+}
+
+button {
+    vertical-align: top;
+    height: 37px;
+}
+
+#output {
+    height: 120px;
+}
