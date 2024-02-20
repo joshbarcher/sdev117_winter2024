@@ -44,7 +44,24 @@ for (let i = 0; i <= colorNames.length - 1; i++) {
     const color = colorNames[i];
 
     tableBody.innerHTML += `<tr>
-        <td>${color}</td>
+        <td class="color-name-cell">${color}</td>
         <td style="background-color: ${color}"></td>
     </tr>`
+}
+
+//add functionality to search by color
+const button = document.querySelector("button");
+button.onclick = function() {
+    //this code will run when the button is clicked
+    const cells = document.querySelectorAll("td.color-name-cell");
+
+    for (const tableCell of cells) {
+        const cellText = tableCell.innerHTML;
+        console.log(cellText);
+
+        if (cellText.includes("Blue") === true) {
+            tableCell.style.backgroundColor = "lightgray";
+            tableCell.innerHTML += " &#10004;";
+        }
+    }
 }
