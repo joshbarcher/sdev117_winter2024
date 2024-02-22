@@ -54,14 +54,32 @@ const button = document.querySelector("button");
 button.onclick = function() {
     //this code will run when the button is clicked
     const cells = document.querySelectorAll("td.color-name-cell");
+    const searchBox = document.querySelector("#search");
+    const searchText = searchBox.value;
 
+    //removes old highlights before we search!
+    for (const tableCell of cells) {
+        //tableCell.style.backgroundColor = "white";
+
+        //show any hidden rows
+        const row = tableCell.parentElement;
+        row.style.display = "table-row";
+    }
+
+    //highlight matches!
     for (const tableCell of cells) {
         const cellText = tableCell.innerHTML;
         console.log(cellText);
 
-        if (cellText.includes("Blue") === true) {
-            tableCell.style.backgroundColor = "lightgray";
-            tableCell.innerHTML += " &#10004;";
+        if (cellText.includes(searchText) === true) {
+            //tableCell.style.backgroundColor = "lightgray";
+            //tableCell.innerHTML += " &#10004;";
+        } else {
+            //select the parent <tr>
+            const row = tableCell.parentElement;
+
+            //hide it
+            row.style.display = "none";
         }
     }
 }
