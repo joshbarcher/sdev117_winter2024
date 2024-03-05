@@ -1,4 +1,6 @@
 body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 div#container {
@@ -13,10 +15,4 @@ img {
     position: absolute;
     top: 150px;
     left: 150px;
-}
-
-input {
-    position: absolute;
-    top: 50px;
-    left: 400px;
 }
