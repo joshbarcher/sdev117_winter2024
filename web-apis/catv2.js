@@ -10,7 +10,7 @@ async function loadImages() {
         mode: "cors",
         headers: {
             "Content-Type": "application/json",
-            "x-api-key": "cab8736c-d9ae-481e-8e20-4fe581e5cb09"
+            "x-api-key": ""
         }
     }
 
