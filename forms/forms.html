@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example Form</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="validation.js"></script>
+    </head>
+    <body>
+        <form>
+            <section>
+                <label>Name:</label>
+                <input type="text" required minlength="3" maxlength="10">
+            </section>
+
+            <section>
+                <label>Age:</label>
+                <input type="number" required min="1" max="100">
+            </section>
+
+            <section>
+                <label>Date you heard about us:</label>
+                <input type="date" required>
+            </section>
+
+            <section>
+                <label>Email:</label>
+                <input type="email" required>
+            </section>
+
+            <section>
+                <label>Phone:</label>
+                <input type="text" required pattern="\d{3}-\d{3}-\d{4}">
+            </section>
+
+            <section>
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="male"><label>Male</label>
+                <input type="radio" name="gender" value="female"><label>Female</label>
+                <input type="radio" name="gender" value="other"><label>Other</label>
+            </section>
+
+            <section>
+                <label>Funny?</label>
+                <input type="radio" name="funny" value="funny"><label>Yes</label>
+                <input type="radio" name="funny" value="not-funny"><label>No</label>
+            </section>
+
+            <button>Submit!</button>
+        </form>
+    </body>
+</html>
