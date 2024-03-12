@@ -1,0 +1,10 @@
+label.primary {
+    width: 200px;
+    display: inline-block;
+    margin: 10px;
+}
+
+span.error {
+    color: red;
+    display: none;
+}
