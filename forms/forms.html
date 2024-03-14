@@ -34,7 +34,9 @@
 
             <section>
                 <label class="primary">Phone:</label>
-                <input type="text" required pattern="\d{3}-\d{3}-\d{4}">
+                <input type="text" id="phone" required pattern="\d{3}-\d{3}-\d{4}">
+                <span class="error" id="phone-error">
+                    Please use the format xxx-yyy-zzzz or (xxx)-yyy-zzzz</span>
             </section>
 
             <section>

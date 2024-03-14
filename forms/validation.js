@@ -28,6 +28,15 @@ function validate(event) {
         document.querySelector("#age-error").style.display = "none";
     }
 
+    const phone = document.querySelector("#phone").value;
+    const phoneNumberPattern = /^(\(\d{3}\)|\d{3})-\d{3}-\d{4}$/;
+    if (phoneNumberPattern.test(phone)) { //good phone!
+        document.querySelector("#phone-error").style.display = "none";
+    } else { //bad phone!
+        document.querySelector("#phone-error").style.display = "inline";
+        allValidFields = false;
+    }
+
     //validate other fields...
 
     validateRadioButtons();
