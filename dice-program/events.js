@@ -7,6 +7,7 @@ window.onload = () => {
     const button = document.querySelector("button");
     button.onclick = () => {
         const playArea = document.querySelector("#play-area");
+        
         const image = document.createElement("img");
 
         image.src = getRandomDiceSide();
